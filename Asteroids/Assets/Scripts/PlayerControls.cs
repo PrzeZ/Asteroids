@@ -11,7 +11,6 @@ public class PlayerControls: MonoBehaviour
     private bool thrusting = false;
     private float turnDirection = 0f;
     
-
     private void Update()
     {
         GetInput();
