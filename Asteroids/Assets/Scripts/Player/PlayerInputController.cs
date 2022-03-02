@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerInputController : MonoBehaviour
+public class PlayerInputController : MonoBehaviour, IPlayerInputController
 {
     private InputData input = new InputData();
 

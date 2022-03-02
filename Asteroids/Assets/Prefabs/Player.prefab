@@ -101,8 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2864a6e9185b2942970d08eb9b706c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInputController: {fileID: 3418143297532933786}
-  playerMovementController: {fileID: 3418143297532933785}
 --- !u!50 &3418143297532933796
 Rigidbody2D:
   serializedVersion: 4
@@ -182,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e2a856a4797714b95e4d4ba9188faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInputController: {fileID: 3418143297532933786}
 --- !u!114 &5697278655298788120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,3 +193,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738cfb3ab7107044690f0fe66ac9946b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovementController: {fileID: 3418143297532933785}

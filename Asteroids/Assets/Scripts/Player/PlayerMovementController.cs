@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementController : MonoBehaviour
+public class PlayerMovementController : MonoBehaviour , IPlayerMovementController
 {
     [SerializeField] private Rigidbody2D rigidbody;
     [SerializeField] private float thrustSpeed = 1f;
