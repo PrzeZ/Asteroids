@@ -453,6 +453,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1643131773, guid: 1660c8339a19f284ab83da1356de0c98, type: 3}
+      propertyPath: pooler
+      value: 
+      objectReference: {fileID: 37047961}
     - target: {fileID: 3418143297532933795, guid: 1660c8339a19f284ab83da1356de0c98, type: 3}
       propertyPath: m_Name
       value: Player
