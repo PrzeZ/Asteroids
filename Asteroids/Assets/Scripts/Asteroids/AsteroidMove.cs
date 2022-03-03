@@ -20,6 +20,9 @@ public class AsteroidMove : MonoBehaviour
         rigidbody.mass = size;
         SetTrajectory(new Vector2(Random.value, Random.value));
 
+        //Add torque
+        rigidbody.AddTorque(Random.Range(-10, 10));
+
     }
 
     public void SetTrajectory(Vector2 direction)
