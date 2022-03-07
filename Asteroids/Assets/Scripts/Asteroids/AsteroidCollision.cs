@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidCollision : MonoBehaviour
+public class AsteroidCollision : MonoBehaviour, IAsteroidCollision
 {
     //[SerializeField] private ObjectPooler pooler;
     private void OnTriggerEnter2D(Collider2D collider)

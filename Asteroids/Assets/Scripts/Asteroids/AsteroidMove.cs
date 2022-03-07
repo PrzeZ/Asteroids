@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AsteroidMove : MonoBehaviour
+public class AsteroidMove : MonoBehaviour, IAsteroidMove
 {
     [SerializeField] private Rigidbody2D rigidbody;
     [SerializeField] private SpriteRenderer spriteRenderer;
