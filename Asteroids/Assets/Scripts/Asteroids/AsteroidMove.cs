@@ -18,7 +18,7 @@ public class AsteroidMove : MonoBehaviour
         // the physics is more realistic
         transform.localScale = Vector3.one * size;
         rigidbody.mass = size;
-        SetTrajectory(new Vector2(Random.value, Random.value));
+        SetTrajectory(Random.insideUnitCircle.normalized);
 
         //Add torque
         rigidbody.AddTorque(Random.Range(-10, 10));
