@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8322579783671816179}
   - component: {fileID: 5110023797626622075}
   m_Layer: 0
-  m_Name: Asteroid 1
+  m_Name: Asteroid medium
   m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,11 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 1744140938}
-  spriteRenderer: {fileID: 7565899392772729012}
-  size: 1
-  minSize: 0.35
-  maxSize: 1.65
-  movementSpeed: 20
+  movementSpeed: 15
 --- !u!114 &7974555768193950191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,4 +162,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b98ded490661b34a802ee7313572ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 8322579783671816179}

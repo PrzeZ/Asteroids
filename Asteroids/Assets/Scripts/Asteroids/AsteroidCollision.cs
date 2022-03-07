@@ -4,27 +4,29 @@ using UnityEngine;
 
 public class AsteroidCollision : MonoBehaviour, IAsteroidCollision
 {
-    //[SerializeField] private ObjectPooler pooler;
+    [SerializeField] private ObjectPooler pooler;
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("PlayerBullet"))
         {
             Debug.Log("Asteroid hit by bullet");
+            this.gameObject.SetActive(false);
+            collider.gameObject.SetActive(false);
+            Split();
+            Split();
         }
     }
 
-    //private void Split()
-    //{
-    //    Vector2 position = transform.position;
-    //    position += Random.insideUnitCircle * 0.5f;
+    private void Split()
+    {
+        Vector2 position = transform.position;
+        position += Random.insideUnitCircle * 0.5f;
 
-    //    // Create the new asteroid at half the size of the current
-    //    GameObject asteroid = pooler.GetPooledObject();
+        GameObject asteroid = pooler.GetPooledObject();
 
-    //    if (asteroid == null) { return; }
-        
-    //    asteroid.gameObject.transform.position = position;
+        if (asteroid == null) { return; }
 
-    //    asteroid.SetActive(true);
-    //}
+        asteroid.gameObject.transform.position = position;
+        asteroid.SetActive(true);
+    }
 }
