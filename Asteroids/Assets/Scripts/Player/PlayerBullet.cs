@@ -1,11 +1,8 @@
 using UnityEngine;
 using Zenject;
 
-public class PlayerBulletMovement : MonoBehaviour, IPoolable<IMemoryPool>
+public class PlayerBullet : MonoBehaviour, IPoolable<IMemoryPool>
 {
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float bulletSpeed = 10f;
-
     IMemoryPool pool;
 
     private void OnBecameInvisible()
@@ -15,12 +12,13 @@ public class PlayerBulletMovement : MonoBehaviour, IPoolable<IMemoryPool>
 
     public void OnSpawned(IMemoryPool pool)
     {
-        rb.AddRelativeForce(new Vector2(0, bulletSpeed));
+        this.pool = pool;
+        gameObject.SetActive(false);
     }
 
     public void OnDespawned()
     {
-
+        pool = null;
     }
 
     public class Factory : PlaceholderFactory<PlayerBullet>

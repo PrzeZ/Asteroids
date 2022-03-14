@@ -149,11 +149,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 37047960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0954c3b958c180408bffc713796bfd3, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8ecd594ac793c489d9b0f82160f18b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPool: {fileID: 2771893522657203601, guid: 3a0cbd2f5ac107e4f8e8fd1441e9604a, type: 3}
-  amountToPool: 10
+  bullet: {fileID: 2771893522657203601, guid: 3a0cbd2f5ac107e4f8e8fd1441e9604a, type: 3}
 --- !u!4 &37047962
 Transform:
   m_ObjectHideFlags: 0
@@ -244,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122945022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0393, y: -0.0246, z: 0}
+  m_LocalPosition: {x: -0.044, y: -0.029, z: 0}
   m_LocalScale: {x: 38.237743, y: 21.747679, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -384,7 +383,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
-  _monoInstallers: []
+  _monoInstallers:
+  - {fileID: 1698682412}
+  - {fileID: 865687292}
+  - {fileID: 802955462}
+  - {fileID: 37047961}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -442,11 +445,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 802955461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0954c3b958c180408bffc713796bfd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 044032e1aca1e024798b0156dafff751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPool: {fileID: 7565899392772729013, guid: 731489d193a94774cb38386fae1882ee, type: 3}
-  amountToPool: 10
+  asteroid: {fileID: 7565899392772729013, guid: cd182a94f4a1c1d4fb806c1e67286941, type: 3}
 --- !u!4 &802955463
 Transform:
   m_ObjectHideFlags: 0
@@ -487,11 +489,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 865687291}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0954c3b958c180408bffc713796bfd3, type: 3}
+  m_Script: {fileID: 11500000, guid: c57a8a87ff6bd3f42a5af77ddd518a4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPool: {fileID: 7565899392772729013, guid: 69ff57a7d80f7a94c9be24992841d5f8, type: 3}
-  amountToPool: 20
+  asteroid: {fileID: 7565899392772729013, guid: 69ff57a7d80f7a94c9be24992841d5f8, type: 3}
 --- !u!4 &865687293
 Transform:
   m_ObjectHideFlags: 0
@@ -546,7 +547,7 @@ PrefabInstance:
     - target: {fileID: 5110023797626622075, guid: cd182a94f4a1c1d4fb806c1e67286941, type: 3}
       propertyPath: pooler
       value: 
-      objectReference: {fileID: 865687292}
+      objectReference: {fileID: 0}
     - target: {fileID: 7565899392772729013, guid: cd182a94f4a1c1d4fb806c1e67286941, type: 3}
       propertyPath: m_Name
       value: Asteroid big
@@ -623,11 +624,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1698682411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0954c3b958c180408bffc713796bfd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 185ba1cc23e2d89438661fa1310aabb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPool: {fileID: 7565899392772729013, guid: 731489d193a94774cb38386fae1882ee, type: 3}
-  amountToPool: 40
+  asteroid: {fileID: 7565899392772729013, guid: 731489d193a94774cb38386fae1882ee, type: 3}
 --- !u!4 &1698682413
 Transform:
   m_ObjectHideFlags: 0
@@ -669,7 +669,11 @@ PrefabInstance:
     - target: {fileID: 1643131773, guid: 1660c8339a19f284ab83da1356de0c98, type: 3}
       propertyPath: pooler
       value: 
-      objectReference: {fileID: 37047961}
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830766080088140871, guid: 1660c8339a19f284ab83da1356de0c98, type: 3}
+      propertyPath: _autoRun
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3418143297532933795, guid: 1660c8339a19f284ab83da1356de0c98, type: 3}
       propertyPath: m_Name
       value: Player
