@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 1744140938}
   movementSpeed: 15
+  size: 0
 --- !u!114 &7974555768193950191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,3 +163,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b98ded490661b34a802ee7313572ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 1

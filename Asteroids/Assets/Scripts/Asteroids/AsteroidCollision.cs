@@ -3,7 +3,19 @@ using Zenject;
 
 public class AsteroidCollision : MonoBehaviour, IAsteroidCollision
 {
-    [Inject(Id = "MediumAsteroidPool")] private AsteroidMove.Factory pooler;
+    [Inject(Id = "SmallAsteroidPool")] private AsteroidMove.Factory smallPool;
+    [Inject(Id = "MediumAsteroidPool")] private AsteroidMove.Factory mediumPool;
+
+    [SerializeField] private AsteroidSize size;
+
+    public enum AsteroidSize
+    {
+        Small,
+        Medium,
+        Big,
+        Huge
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -19,10 +31,22 @@ public class AsteroidCollision : MonoBehaviour, IAsteroidCollision
 
     private void Split()
     {
-        Vector2 position = transform.position;
-        position += Random.insideUnitCircle * 0.5f;
+        AsteroidMove asteroid = null;
+        if (size == AsteroidSize.Small)
+        {
+            return;
+        }
+        else if (size == AsteroidSize.Medium)
+        {
+            asteroid = smallPool.Create();
+        }
+        else if (size == AsteroidSize.Big)
+        {
+            asteroid = mediumPool.Create();
+        }
 
-        AsteroidMove asteroid = pooler.Create();
+        Vector2 position = transform.position;
+        position += Random.insideUnitCircle * 0.5f;    
 
         if (asteroid == null) { return; }
 
