@@ -4,12 +4,12 @@ public class PlayerMovementController : MonoBehaviour , IPlayerMovementControlle
 {
     [SerializeField] private Rigidbody2D rigidbody;
     [SerializeField] private float thrustSpeed = 1f;
-    [SerializeField] private float rotationSpeed = 0.5f;
+    [SerializeField] private float rotationSpeed = 50f;
 
     public void Move(InputData inputData)
     {
         Vector2 move = inputData.GetMove();
         rigidbody.AddRelativeForce(new Vector2(0, move.x * thrustSpeed));
-        rigidbody.AddTorque(move.y);
+        rigidbody.angularVelocity = (move.y * rotationSpeed);
     }
 }
