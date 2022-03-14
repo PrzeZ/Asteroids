@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public void Update()
     {
         playerInputController.ReadInput();
-        playerShootingController.Shoot();
+        playerShootingController.Shoot(playerInputController.GetInputData());
     }
 
     public void FixedUpdate()

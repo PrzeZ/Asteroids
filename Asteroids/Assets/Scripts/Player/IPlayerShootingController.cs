@@ -1,5 +1,5 @@
 
 public interface IPlayerShootingController
 {
-    void Shoot();
+    void Shoot(InputData data);
 }

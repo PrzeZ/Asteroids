@@ -21,6 +21,12 @@ public class PlayerInputController : MonoBehaviour, IPlayerInputController
         {
             input.AddMove(0, -1);
         }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            input.SetShooting(true);
+        }
+
     }
 
     public InputData GetInputData()

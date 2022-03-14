@@ -11,8 +11,10 @@ public class PlayerShootingController : MonoBehaviour, IPlayerShootingController
 
     private float lastShot = 0.0f;
 
-    public void Shoot()
+    public void Shoot(InputData data)
     {
+        if (!data.IsShooting()) { return; }
+
         PlayerBullet bullet = pooler.Create();
         if (bullet == null) { return; }
 
