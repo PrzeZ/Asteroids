@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class ScreenWrap : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
+    private Camera cam;
 
     private bool isWrappingX = false;
     private bool isWrappingY = false;
+
+    private void Start()
+    {
+        cam = Camera.main;
+    }
 
     private void OnBecameInvisible()
     {

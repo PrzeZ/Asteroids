@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InputData : MonoBehaviour
+public class InputData
 {
     private Vector2 move;
     //private bool shoot;

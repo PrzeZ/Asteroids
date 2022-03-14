@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPooler : MonoBehaviour
+public class ObjectPooler : MonoBehaviour, IObjectPooler
 {
     private List<GameObject> pooledObjects;
     [SerializeField] private GameObject objectToPool;
