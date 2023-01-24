@@ -1,2 +1,2 @@
 # Asteroids
- Asteroids game made with Unity
+(unfinished) Asteroids game prototype made with Unity and Zenject
